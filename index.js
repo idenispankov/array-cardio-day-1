@@ -142,3 +142,66 @@ const transportation = data.reduce((obj, item) => {
   return obj;
 }, {});
 console.log(transportation);
+
+/////////////////////////////////////////  PRACTICE  /////////////////////////////////////////
+
+// 1. FILTER
+const words = [
+  'spray',
+  'limit',
+  'elite',
+  'exuberant',
+  'destruction',
+  'present',
+];
+const result = words.filter((word) => word.length > 6);
+console.log(result);
+
+// 2. MAP
+const peoplePractice = [
+  { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
+  { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
+  { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
+  { first: 'Marie', last: 'Curie', year: 1867, passed: 1934 },
+  { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 },
+];
+
+// Get last name and passed year
+const lastNameAndPassed = peoplePractice.map((person) => {
+  return `last-name: ${person.last}, passed: ${person.passed}`;
+});
+console.log(lastNameAndPassed);
+
+// 3. Sort
+const numbers = [
+  2,
+  19,
+  6,
+  57,
+  99,
+  46,
+  33,
+  84,
+  3,
+  7,
+  1035,
+  347,
+  122,
+  0,
+  0,
+  356,
+  22,
+  40,
+  12,
+];
+
+const numbersSorted = numbers.sort((a, b) => {
+  return a > b ? 1 : -1;
+});
+console.log(numbersSorted);
+
+//  4. REDUCE
+const sum = numbers.reduce((acc, cur) => {
+  return acc + cur;
+});
+console.log(sum);
